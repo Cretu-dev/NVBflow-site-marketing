@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@keyframes aurora-in {
+  to { opacity: 1; }
+}
+.aurora-fade {
+  opacity: 0;
+  animation: aurora-in 2.5s ease-out 3s forwards;
+}
+
+@theme {
+  --color-navy: #00006e;
+  --color-navy-deep: #11115f;
+  --color-brand-indigo: #322fbd;
+
+  --color-background: #090e17;
+  --color-card: #121a2f;
+  --color-input: #0d1321;
+  --color-border: #1e2a45;
+
+  --color-foreground: #f1f5f9;
+  --color-muted: #8292b4;
+  --color-highlight: #60a5fa;
+
+  --color-dock: #17223b;
+  --color-dock-app: #6c7a9c;
+  --color-dock-hover: #e2e8f0;
+  --color-dock-select: #3b82f6;
+
+  --color-success: #10b981;
+  --color-error: #e11d48;
+  --color-warning: #f59e0b;
+
+  --font-display: "Sora", sans-serif;
+  --font-script: "Playwrite IE", cursive;
+  --font-sans: "DM Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
